@@ -1,5 +1,5 @@
 import express from 'express'
-import {route} from './src/routes/menu.js'
+import {route} from './routes/menu.js'
 const PORT = 3000
 const app = express()
 
@@ -10,4 +10,4 @@ app.use((err,req,res,next)=>{
 })
 
 
-app.listen(PORT,()=>console.log('Server Is Running....'))
+app.listen(PORT)
