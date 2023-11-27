@@ -6,7 +6,6 @@ export async function getMenu(req,res,next){
     if(rows.length == 0) return res.status(400).json({message:'Product tidak ada'})
     return res.status(200).json(rows)  
     } catch (error) {
-        console.log(error)
         return next(error)
     }
 }
