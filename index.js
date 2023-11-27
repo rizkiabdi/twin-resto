@@ -1,6 +1,6 @@
 import express from 'express'
 import {route} from './src/routes/menu.js'
-const PORT = 5000
+const PORT = 3000
 const app = express()
 
 app.use('/api/v1',route)
