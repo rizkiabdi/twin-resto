@@ -13,7 +13,7 @@ export  async function getMenuByCategory(req,res,next){
     try {
         const categoryName = req.query.category
         if(err) return next(err)
-        const [rows] =  await connection.query(`SELECT m.name,m.price FROM menu as m INNER JOIN category_menu as c on m.category_id = c.id LEFT JOIN  WHERE c.name = '${categoryName}'`)
+        const [rows] =  await connection.query(`SELECT m.name,m.price FROM menu as m INNER JOIN category_menu as c on m.category_id = c.id WHERE c.name = '${categoryName}'`)
         if(rows.length == 0) return res.status(400).json({message:'Menu tidak ada'})
         return res.status(200).json(rows)
     } catch (error) {
