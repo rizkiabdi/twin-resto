@@ -1,3 +1,3 @@
 export function webHook(req,res){
-    console.log(req.body)
+    return res.json({data:req.body})
 }
