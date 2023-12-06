@@ -10,7 +10,7 @@ app.use(cors({
 }))
 
 app.use('/api/v1',routeMenu)
-app.use('/api/v1/webhook',routeWebHook)
+app.use('/api/v1',routeWebHook)
 
 
 
