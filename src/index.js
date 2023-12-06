@@ -1,5 +1,6 @@
 import express from 'express'
 import {route as routeMenu} from './routes/menu.js'
+import { route as routeWebHook } from './routes/webhook.js'
 
 import cors from 'cors'
 const PORT = 5000
@@ -9,6 +10,7 @@ app.use(cors({
 }))
 
 app.use('/api/v1',routeMenu)
+app.use('/api/v1/webhook',routeWebHook)
 
 
 
