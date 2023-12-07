@@ -6,6 +6,6 @@ export async function webHook(req,res){
         return res.status(200).json({status:ok})
         
     } catch (error) {
-        return res.json(error)
+        return res.json({error:error})
     }
 }
